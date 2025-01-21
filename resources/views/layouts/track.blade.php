@@ -49,7 +49,7 @@
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
-                            <a class="nav-link btn btn-info px-4 text-white fw-bold me-2 m-2" href="{{ route('tracking') }}">Track Pengajuan</a>
+                            <a class="nav-link btn btn-info px-4 text-white fw-bold me-2 m-2" href="{{ url('/') }}">Kembali</a>
                         </li>
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -93,6 +93,8 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('admin/vendors/sweetalert2/sweetalert2.all.js') }}"></script>
+    <script src="{{ asset('admin/js/extensions/sweetalert2.js') }}"></script>
     @yield('scripts')
 </body>
 </html>

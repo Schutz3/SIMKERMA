@@ -1,15 +1,15 @@
-@extends('layouts.app')
+@extends('layouts.track')
 @section('content')
 <section class="row justify-content-center">
-    <div class="col-md-8">
-        <h1 class="card-title mb-4 text-center">Track Kerjasama</h1>
+    <div class="col-md-7">
+        <h1 class="card-title mb-4 mt-4 text-center">Track Kerjasama</h1>
         <div class="card shadow-sm">
             <div class="card-body">
                 <h4 class="card-title mb-4">Track Persetujuan Kerjasama</h4>
                 <form id="trackForm">
                     <div class="input-group mb-3">
                         <input type="text" id="tracker_id" class="form-control" name="tracker_id" required placeholder="Masukan ID Pengajuan">
-                        <button type="submit" class="btn btn-custom">Cari</button>
+                        <button type="submit" class="btn btn-info">Cari</button>
                     </div>
                 </form>
                 <div id="response" class="mt-4"></div>
@@ -68,7 +68,7 @@ $(document).ready(function() {
                                                     <td><b>${item.created_at}</b></td>
                                                     <td>${item.step}</td>
                                                 </tr>
-                                            `).join('') : '<tr><td colspan="3">No log data available</td></tr>'}
+                                            `).join('') : '<tr><td colspan="3">Tidak Ada Log, (Data Seed)</td></tr>'}
                                         </tbody>
                                     </table>
                                 </div>
